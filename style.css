@@ -3,13 +3,15 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #acb6e5; /* Placeholder color */
+    background-color: #acb6e5;
+    /* Placeholder color */
     font-family: 'Press Start 2P', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('images/mario-bros-bg.jpg'); /* Update with your background image */
+    background-image: url('images/mario-bros-bg.jpg');
+    /* Update with your background image */
     background-size: cover;
     background-position: center;
 }
@@ -17,6 +19,7 @@ body {
 .container {
     text-align: center;
     color: #fff;
+    padding: 10px;
 }
 
 h1 {
@@ -27,60 +30,81 @@ h1 {
 .mario-style {
     display: flex;
     justify-content: center;
-    font-size: 2em;
-    margin: 0.5em 0;
+    font-size: 2.5em;
+    margin: 1em 0;
     text-shadow: 2px 2px 0px #000;
+    flex-wrap: wrap;
 }
 
 .mario-style span {
-    margin: 0 2px;
+    margin-right: 5px;
 }
 
-.mario-style.letter1 { color: #3a88f8; } /* Blue */
-.mario-style.letter2 { color: #f5e942; } /* Yellow */
-.mario-style.letter3 { color: #ea3323; } /* Red */
-.mario-style.letter4 { color: #43a047; } /* Green */
-.mario-style .letter5 { color: #f5e942; } /* Yellow */
-.mario-style .letter6 { color: #ea3323; } /* Red */
-.mario-style .letter7 { color: #3a88f8; } /* Blue */
-.mario-style .letter8 { color: #43a047; } /* Green */
-.mario-style .letter9 { color: #ea3323; } /* Red */
-.mario-style .letter10 { color: #3a88f8; } /* Blue */
+.mario-style .letter1 {
+    color: #115cc9;
+}
+
+.mario-style .letter2 {
+    color: #f5e942;
+}
+
+.mario-style .letter3 {
+    color: #ea3323;
+}
+
+.mario-style .letter4 {
+    color: #43a047;
+}
 
 h2 {
     font-size: 1em;
     margin: 0.5em 0;
 }
 
-.start-btn {
+.retro-btn {
     background-color: #000;
     color: #fff;
-    border: none;
-    padding: 1em 2em;
-    margin: 1em 0;
+    border: 4px solid #000;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
     display: inline-block;
     position: relative;
     text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 1px 1px 0px #000;
+    line-height: 1;
+    padding: 10px 10px;
+    z-index: 2;
+    margin: 10px;
+    vertical-align: top;
 }
 
-.start-btn:hover {
-    background-color: #333;
+.retro-btn:active {
+    top: 3px;
 }
 
-.start-btn:after {
-    content: '';
+.retro-btn:before {
+    content: "";
+    display: block;
     position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #fff;
-    top: 50%;
-    right: -20px;
-    transform: translateY(-50%);
+    top: 10px;
+    bottom: 10px;
+    left: -10px;
+    right: -10px;
+    background: black;
+    z-index: -1;
+}
+
+.retro-btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: -10px;
+    right: -10px;
+    background: black;
+    z-index: -1;
 }
 
 .social-icons {
@@ -96,4 +120,50 @@ h2 {
 .social-icons img {
     width: 40px;
     height: 40px;
+}
+
+.pressToplay {
+    text-shadow: 2px 2px 0px #000;
+    margin-bottom: 1em;
+    color: #ff7373;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .mario-style {
+        font-size: 1.8em;
+    }
+
+    .retro-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .mario-style {
+        font-size: 1.5em;
+    }
+
+    .retro-btn {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
 }
