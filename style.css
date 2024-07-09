@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-body {
+#bodyIndex {
     margin: 0;
     padding: 0;
     background-color: #acb6e5;
-    /* Placeholder color */
     font-family: 'Press Start 2P', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-image: url('images/mario-bros-bg.jpg');
-    /* Update with your background image */
     background-size: cover;
     background-position: center;
 }
 
-.container {
+.containerIndex {
     text-align: center;
     color: #fff;
     padding: 10px;
@@ -38,22 +36,6 @@ h1 {
 
 .mario-style span {
     margin-right: 5px;
-}
-
-.mario-style .letter1 {
-    color: #115cc9;
-}
-
-.mario-style .letter2 {
-    color: #f5e942;
-}
-
-.mario-style .letter3 {
-    color: #ea3323;
-}
-
-.mario-style .letter4 {
-    color: #43a047;
 }
 
 h2 {
@@ -166,4 +148,55 @@ h2 {
         width: 25px;
         height: 25px;
     }
+}
+
+/*pagina livello 1*/
+
+#bodyLevel1 {
+    margin: 0;
+    padding: 0;
+    background-color: #acb6e5;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('images/mario-bros-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.containerLevel1 { 
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+.knowAboutMe {
+    text-shadow: 2px 2px 0px #000;
+    margin-bottom: 1em;
+    color: #09da0d;
+}
+.containerLevel1, .overlay {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.retro-btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Initially hide the overlay */
+.overlay {
+    display: none;
+}
+
+/* Overlay content styles */
+.overlay-content {
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
 }
